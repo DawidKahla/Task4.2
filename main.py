@@ -11,5 +11,11 @@ def is_palindrom(word: str):
             return False
     return True
 
-word = input('Wpisz wyraz, aby sprawdzić, czy jest palindromem: ') 
-print(f"Wyraz {word}{'' if is_palindrom(word) else ' nie'} jest palindromem.")
+print('Program sprawdza czy zadany wyraz jest palindromem.')
+print('Wciśnij CTRL + D, jeśli chcesz zakończyć działanie programu.')
+try:
+  while True:
+    word = input('Wpisz wyraz, aby sprawdzić, czy jest palindromem: ') 
+    print(f'Wyraz "{word}"{"" if is_palindrom(word) else " nie"} jest palindromem.')
+except EOFError:
+  print('\nŻegnaj!')
